@@ -7,6 +7,8 @@ var oxygen = true;
 var greatWhite = 7.5;
 var tigerShark = 5;
 var blueShark = 2.5;
+var weight = 180
+var sink = false
 var sharkNames =["Great White", "Tiger", "Blue Shark"]
 
 //Procedure Function: Return to the surface and get a new tank
@@ -70,9 +72,24 @@ var checkStopwatch = function () {
 			console.log("You have approximately " + min + " minutes and " + seconds + " seconds before you run out of oxygen!")
 		
 }
-}
+};
 
-checkStopwatch()
+// Nested Conditional for whether or not you need a vest?
+
+var needVest = function (weight, sink) {
+	if (weight >= 180) {
+		console.log("In that case, you will require a vest!")
+			if (sink === false) {
+				console.log("You will also require some weights for your vest!")
+				} else {
+				console.log("Since you already sink, you will not require any weights!")
+				};
+		} else { 
+		console.log("Well, you won't need a vest then!")
+	}	
+};
+
+needVest(180, true)
 
 
 
