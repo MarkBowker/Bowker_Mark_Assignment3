@@ -2,14 +2,18 @@
 
 var oxygenTime = 45;
 var newTank = 45;
+var depth = 79;
 var returnToSurface = false;
+var status = false;
 var oxygen = true;
 var greatWhite = 7.5;
 var tigerShark = 5;
 var blueShark = 2.5;
-var weight = 180
-var sink = false
+var weight = 180;
+var sink = false;
+var dead = true;
 var sharkNames =["Great White", "Tiger", "Blue Shark"]
+var poisonousFish = ["Puffer Fish", "Lion Fish", "Stone Fish"]
 
 //Procedure Function: Return to the surface and get a new tank
 function getNewTank () {
@@ -75,6 +79,7 @@ var checkStopwatch = function () {
 };
 
 // Nested Conditional for whether or not you need a vest?
+// Flowchart from here
 
 var needVest = function (weight, sink) {
 	if (weight >= 180) {
@@ -89,7 +94,50 @@ var needVest = function (weight, sink) {
 	}	
 };
 
-needVest(180, true)
+// function using Array property, being bitten by a poisonous fish
+// This has Argument Array, argument string, and array property
+
+var bitByPoisonousFish = function(poisonousFish, message) {
+	console.log("Oh No! You have been bitten by a poisonous fish!")
+	for (var i = 0; i < poisonousFish.length; i++) {
+	console.log("It could have been a " + poisonousFish[i] + "! " + message)
+	}
+}
+	
+
+	//bitByPoisonousFish(poisonousFish," Will you survive!")
+	
+// While loop
+
+var checkDepth = function () {
+	while (depth > 75) {
+	console.log("You're getting too deep!, return to at least 75 feet to remain safe!" )
+	depth = depth -5
+	console.log("Now that you've just gone up 5 feet, you're depth is "  + depth)
+		} if (depth <= 75 && oxygen === true) {
+		status = true
+		console.log("You're fine for now!")
+		return status;
+		
+	
+	};
+	
+;}
+
+// Array Method push
+
+var moreFish = function (poisonousFish) {
+poisonousFish.push("Box Fish", "Trunk Fish")
+console.log("It seems that 'Scuba Steve' has spotted two more poisonous fish!")
+	console.log("Now, we will all have to keep an eye out for the following: ")
+		for (var i = 0; i < poisonousFish.length; i++) {
+ 		console.log( "The " + poisonousFish[i])
+		}
+};
+
+moreFish(poisonousFish)
+
+// JSON.data
 
 
 
