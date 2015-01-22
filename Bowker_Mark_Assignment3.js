@@ -24,7 +24,7 @@ var poisonousFish = ["Puffer Fish", "Lion Fish", "Stone Fish"]
 
 //Procedure Function: Return to the surface and get a new tank
 function getNewTank () {
-	var stillBreathing = newTank + oxygenTime
+	var stillBreathing = newTank + oxygenTime;
 		if (returnToSurface === true) {
 		console.log("You now have " + stillBreathing + " minutes to kill Sharks!" );
 			} else {
@@ -37,8 +37,8 @@ function getNewTank () {
 
 var killGreatWhite = function (numberOfGreatWhites) {
 	if (oxygenTime > 0) {
-		oxygenTime = oxygenTime - (greatWhite * numberOfGreatWhites)
-		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!")
+		oxygenTime = oxygenTime - (greatWhite * numberOfGreatWhites);
+		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!");
 			} else if (oxygenTime < 0) {
 			console.log("out");
 			return oxygenTime;
@@ -49,8 +49,8 @@ var killGreatWhite = function (numberOfGreatWhites) {
 
 var killTigerShark = function (numberOfTigerSharks) {
 	if (oxygenTime > 0) {
-		oxygenTime = oxygenTime - (tigerShark * numberOfTigerSharks)
-		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!")
+		oxygenTime = oxygenTime - (tigerShark * numberOfTigerSharks);
+		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!");
 			} else if (oxygenTime < 0) {
 			console.log("out");
 			return oxygenTime;
@@ -61,8 +61,8 @@ var killTigerShark = function (numberOfTigerSharks) {
 
 var killBlueShark = function (numberOfBlueSharks) {
 	if (oxygenTime > 0) {
-		oxygenTime = oxygenTime - (blueShark * numberOfBlueSharks)
-		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!")
+		oxygenTime = oxygenTime - (blueShark * numberOfBlueSharks);
+		console.log("You have " + oxygenTime + " minutes to stay down and kill more Sharks!");
 			} else if (oxygenTime < 0) {
 			console.log("out");
 			return oxygenTime;
@@ -73,36 +73,36 @@ var killBlueShark = function (numberOfBlueSharks) {
 
 var needVest = function (weight, sink) {
 	if (weight >= 180) {
-		console.log("In that case, you will require a vest!")
+		console.log("In that case, you will require a vest!");
 			if (sink === false) {
-				console.log("You will also require some weights for your vest!")
+				console.log("You will also require some weights for your vest!");
 				} else {
-				console.log("Since you already sink, you will not require any weights!")
+				console.log("Since you already sink, you will not require any weights!");
 				};
 		} else { 
-		console.log("Well, you won't need a vest then!")
+		console.log("Well, you won't need a vest then!");
 	}	
 };
 
 //Nested Loop for looking at stopwatch to check the time
 
 var checkStopwatch = function () {
-		oxygenTime = oxygenTime - 1
+		oxygenTime = oxygenTime - 1;
 		for (var min = oxygenTime; min === oxygenTime; min--){
 				if (oxygenTime = oxygenTime - 2){
 				break;} 
-			for (var seconds = 60; seconds >= 1; seconds--) {
-			console.log("You have approximately " + min + " minutes and " + seconds + " seconds before you run out of oxygen!")
-			}
 		}
+			for (var seconds = 60; seconds >= 1; seconds--) {
+			console.log("You have approximately " + min + " minutes and " + seconds + " seconds before you run out of oxygen!");
+			}
 };
 
 // function using Array property, being bitten by a poisonous fish
 
 var bitByPoisonousFish = function(poisonousFish, message) {
-	console.log("Oh No! You have been bitten by a poisonous fish!")
+	console.log("Oh No! You have been bitten by a poisonous fish!");
 	for (var i = 0; i < poisonousFish.length; i++) {
-	console.log("It could have been a " + poisonousFish[i] + "! " + message)
+	console.log("It could have been a " + poisonousFish[i] + "! " + message);
 	}
 }
 	
@@ -110,12 +110,12 @@ var bitByPoisonousFish = function(poisonousFish, message) {
 
 var checkDepth = function () {
 	while (depth > 75) {
-	console.log("The gauge says you're too deep!, go up gradually by 5 feet to remain safe!" )
-	depth = depth -5
-	console.log("Now that you've just gone up 5 feet, you're depth is "  + depth)
+	console.log("The gauge says you're too deep!, go up gradually by 5 feet to remain safe!" );
+	depth = depth -5;
+	console.log("Now that you've just gone up 5 feet, you're depth is "  + depth);
 		} if (depth <= 75 && oxygen === true) {
-		statusOk = true
-		console.log("You're fine for now!")
+		statusOk = true;
+		console.log("You're fine for now!");
 		return statusOk;
 		}	
 };
@@ -124,9 +124,9 @@ var checkDepth = function () {
 
 var moreFish = function (poisonousFish) {
 poisonousFish.push("Box Fish", "Trunk Fish");
-console.log("It seems that 'Scuba Steve' has spotted two more poisonous fish!")
-	console.log("Now, we will all have to keep an eye out for the following: ")
- 		console.log( "The " + poisonousFish)
+console.log("It seems that 'Scuba Steve' has spotted two more poisonous fish!");
+	console.log("Now, we will all have to keep an eye out for the following: ");
+ 		console.log( "The " + poisonousFish);
  		return poisonousFish;
 		}
 
@@ -144,7 +144,7 @@ console.log("We are going to go on a scuba diving/spearfishing adventure for the
 console.log("First we need to determine if we need a vest, and if we need weights for the vest. I weigh 180 lbs and usually sink!")
 needVest(180, sink)
 console.log("Well now I have my vest without any weights! When we start out, we will have " + oxygenTime + " minutes of oxygen in our tank!")
-console.log("Let's go kill some sharks! It will take more time to kill certain sharks than it will others, lets start by killing one Great White Shaark!")
+console.log("Let's go kill some sharks! It will take more time to kill certain sharks than it will others, lets start by killing one Great White Shark!")
 killGreatWhite(1)
 console.log ("Now, how about 3 Tiger Sharks") 
 killTigerShark(3)
